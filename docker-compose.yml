@@ -10,12 +10,11 @@ services:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
-
-    envioronment:
-    - DB_HOST=db
-    - DB_NAME=devdb
-    - DB_USER=devuser
-    - DB_PASS=Aniking*
+    environment:
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=MHFC1913
     depends_on:
       - db
 
@@ -26,9 +25,7 @@ services:
     environment:
       - POSTGRES_DB=devdb
       - POSTGRES_USER=devuser
-      - POSTGRES_PASSWORD=Aniking*
-    
+      - POSTGRES_PASSWORD=MHFC1913
+
 volumes:
   dev-db-data:
-
-
